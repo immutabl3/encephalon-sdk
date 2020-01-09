@@ -1,0 +1,56 @@
+{
+  "name": "@encephalon/sdk",
+  "version": "0.0.1",
+  "description": "javascript sdk for encephalon api",
+  "main": "./legacy.js",
+  "module": "./lib/cjs.js",
+  "browser": "./dist/encephalon.min.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "node -r esm tests | tap-spec",
+    "browser": "http-server ./ -o browser.html",
+    "debug": "node -r esm --inspect-brk=1234 tests | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immutabl3/encephalon-sdk.git"
+  },
+  "engines": {
+    "node": "^13.5.0",
+    "npm": "^6.13.4"
+  },
+  "keywords": [
+    "encephalon"
+  ],
+  "author": "Immutable, LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/immutabl3/encephalon-sdk/issues"
+  },
+  "homepage": "https://github.com/immutabl3/encephalon-sdk#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/runtime": "^7.7.7",
+    "@babel/runtime-corejs3": "^7.7.7",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "compression-webpack-plugin": "^3.1.0",
+    "date-fns": "^2.9.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "http-server": "^0.12.1",
+    "lodash": "^4.17.15",
+    "nanoid": "^2.1.9",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0",
+    "validator": "^12.1.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "superagent": "^5.1.2"
+  }
+}
